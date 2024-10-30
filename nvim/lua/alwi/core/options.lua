@@ -24,6 +24,7 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+opt.fillchars = { eob = " " }
 
 -- setup backspace
 opt.backspace = "indent,eol,start"
