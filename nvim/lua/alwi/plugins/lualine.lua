@@ -7,16 +7,21 @@ return {
 
 		lualine.setup({
 			options = {
-        theme = "gruvbox-material",
+				theme = "gruvbox-material",
 				icons_enabled = true,
 				component_separators = "|",
 				section_separators = "",
 			},
 			sections = {
 				lualine_a = {
-          {"mode"},
-          {"buffers"}
-        },
+					{
+						"mode",
+						fmt = function(str)
+							return str:sub(1, 1)
+						end,
+					},
+					{ "buffers" },
+				},
 				lualine_x = {
 					{
 						lazy_status.updates,
@@ -37,4 +42,3 @@ return {
 		})
 	end,
 }
-
