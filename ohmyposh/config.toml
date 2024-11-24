@@ -23,8 +23,8 @@ final_space = true
   background = 'transparent'
 
 [transient_prompt]
-  foreground = 'p:thm_blue'
-  background = 'p:thm_bg'
+  template = '󱚢  '
+  foreground = 'p:thm_orange'
 
 [[blocks]]
   type = 'prompt'

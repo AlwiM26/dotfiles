@@ -19,7 +19,7 @@ config.colors = {
 		"#7DAEA3", -- Blue
 		"#D3869B", -- Magenta
 		"#89B482", -- Cyan
-		"#D4BE98"  -- White
+		"#D4BE98", -- White
 	},
 	brights = { -- Bright ANSI colors
 		"#928374", -- Bright Black
@@ -29,8 +29,8 @@ config.colors = {
 		"#7DAEA3", -- Bright Blue
 		"#D3869B", -- Bright Magenta
 		"#89B482", -- Bright Cyan
-		"#FBF1C7"  -- Bright White
-	}
+		"#FBF1C7", -- Bright White
+	},
 }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
@@ -38,18 +38,20 @@ config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 11.5
 
 config.enable_tab_bar = false
+config.initial_rows = 40
+config.initial_cols = 150
 
 config.window_decorations = "RESIZE"
 config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
+	left = 2,
+	right = 2,
+	top = 2,
+	bottom = 2,
 }
 
 config.keys = {
 	{
-		key = 'F11',
+		key = "F11",
 		action = wezterm.action.ToggleFullScreen,
 	},
 }
