@@ -40,7 +40,7 @@ final_space = true
       style = 'full'
 
 [[blocks.segments]]
-    template = '<p:thm_blue> : </><p:thm_cyan>{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <p:thm_yellow> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} | {{ end }}{{ if .Staging.Changed }}<p:thm_blue> {{ .Staging.String }}</>{{ end }} '
+    template = '<p:thm_blue> : </><p:thm_cyan>{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <p:thm_yellow> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} | {{ end }}{{ if .Staging.Changed }} <p:thm_blue> {{ .Staging.String }}</>{{ end }} '
     foreground = 'p:thm_fg'
     # background = '#FFFB38'
     type = 'git'
