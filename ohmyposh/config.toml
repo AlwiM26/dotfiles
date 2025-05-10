@@ -12,7 +12,7 @@ final_space = true
   thm_magenta = '#d3869b'
   thm_pink = '#fb4934'
   thm_red = '#cc241d'
-  thm_green = '#b8bb26'
+  thm_green = '#3d4220'
   thm_yellow = '#fabd2f'
   thm_blue = '#83a598'
   thm_orange = '#fe8019'
@@ -23,7 +23,7 @@ final_space = true
   background = 'transparent'
 
 [transient_prompt]
-  template = '󱚢  '
+  template = '󱚢 '
   foreground = 'p:thm_orange'
 
 [[blocks]]
@@ -53,7 +53,7 @@ final_space = true
       fetch_upstream_icon = true
 
   [[blocks.segments]]
-    template = ' '
+    template = ''
     foreground = 'p:thm_red'
     type = 'status'
     style = 'plain'
@@ -121,6 +121,6 @@ final_space = true
 
   [[blocks.segments]]
     template = '󰫣'
-    foreground = 'p:thm_green'
+    foreground = 'p:thm_orange'
     type = 'text'
     style = 'plain'
