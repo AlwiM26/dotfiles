@@ -1,7 +1,7 @@
 return {
-	"williamboman/mason.nvim",
+	"mason-org/mason.nvim",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
+		"mason-org/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
@@ -35,9 +35,10 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier",
+				"prettierd",
 				"stylua",
 				"eslint_d",
+				"dcm",
 			},
 		})
 	end,

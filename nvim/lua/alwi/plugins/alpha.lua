@@ -26,16 +26,13 @@ return {
 			{ type = "padding", val = 2 },
 			dashboard.section.buttons,
 			{ type = "padding", val = 1 },
-			dashboard.section.footer,
 		}
 
-		-- Center the content horizontally
-		dashboard.section.header.opts.hl = "AlphaHeader"
-		dashboard.section.buttons.opts.hl = "AlphaButtons"
-		dashboard.section.footer.opts.hl = "AlphaFooter"
+		-- Set header and button position to center
 		dashboard.section.header.opts.position = "center"
 		dashboard.section.buttons.opts.position = "center"
 		dashboard.section.footer.opts.position = "center"
+
 		-- Send config to alpha.nvim
 		alpha.setup(dashboard.opts)
 
