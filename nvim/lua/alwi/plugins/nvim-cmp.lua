@@ -56,7 +56,7 @@ return {
 			formatting = {
 				format = function(entry, vim_item)
 					-- lspkind is used to show icons
-					vim_item = require("lspkind").cmp_format({
+					vim_item = lspkind.cmp_format({
 						maxwidth = 50,
 						ellipsis_char = "...",
 					})(entry, vim_item)
