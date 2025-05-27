@@ -13,14 +13,6 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim",
-		{
-			"roobert/tailwindcss-colorizer-cmp.nvim",
-			config = function()
-				require("tailwindcss-colorizer-cmp").setup({
-					color_square_width = 2,
-				})
-			end,
-		},
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -61,8 +53,6 @@ return {
 						ellipsis_char = "...",
 					})(entry, vim_item)
 
-					-- tailwindcss-colorizer-cmp is used to show tailwind color
-					vim_item = require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)
 					return vim_item
 				end,
 			},
