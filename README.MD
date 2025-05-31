@@ -1,4 +1,4 @@
-![Neovim greeter](./dev1.png)
+![Neovim greeter](./images/dev1.png)
 # Development environment setup
 My personal development environment with Wezterm terminal emulator, Neovim text editor, Oh My Posh shell custom prompt and tmux 
 
