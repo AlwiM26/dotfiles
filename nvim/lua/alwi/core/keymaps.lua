@@ -16,12 +16,11 @@ keymap.set("n", "<leader>s<", "<C-w><", { desc = "Decrease current window width"
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Resize split window to equal size" })
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close active split window" })
 
--- Tab management
--- keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
--- keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
--- keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
--- keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
--- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer / file in new tab" })
+-- Window movement
+keymap.set("n", "<C-h>", "<C-w>h")
+keymap.set("n", "<C-j>", "<C-w>j")
+keymap.set("n", "<C-k>", "<C-w>k")
+keymap.set("n", "<C-l>", "<C-w>l")
 
 --Buffer management
 keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Move to next buffer" })
