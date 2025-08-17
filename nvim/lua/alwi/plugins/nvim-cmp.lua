@@ -56,10 +56,10 @@ return {
 			formatting = {
 				format = function(entry, vim_item)
 					-- lspkind is used to show icons
-					vim_item = lspkind.cmp_format({
-						maxwidth = 50,
-						ellipsis_char = "...",
-					})(entry, vim_item)
+					-- vim_item = lspkind.cmp_format({
+					-- 	maxwidth = 50,
+					-- 	ellipsis_char = "...",
+					-- })(entry, vim_item)
 
 					-- tailwindcss-colorizer-cmp is used to show tailwind color
 					vim_item = require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)
