@@ -19,7 +19,7 @@ return {
 				local opts = { buffer = ev.buf, silent = true }
 
 				opts.desc = "Show LSP references"
-				keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
+				keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
 
 				opts.desc = "Go to declaration"
 				keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
@@ -44,12 +44,6 @@ return {
 
 				opts.desc = "Show line diagnostics"
 				keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
-
-				-- opts.desc = "Go to previous diagnostics"
-				-- keymap.set("n", "[d", vim.diagnostic.jump({ count = 1, float = true }), opts)
-				--
-				-- opts.desc = "Go to next diagnostics"
-				-- keymap.set("n", "]d", vim.diagnostic.jump({ count = -1, float = true }), opts)
 
 				opts.desc = "Show documentation for what is under the cursor"
 				keymap.set("n", "K", vim.lsp.buf.hover, opts)
