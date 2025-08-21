@@ -22,7 +22,11 @@ keymap.set("n", "<C-j>", "<C-w>j")
 keymap.set("n", "<C-k>", "<C-w>k")
 keymap.set("n", "<C-l>", "<C-w>l")
 
---Buffer management
+-- Buffer management
 keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Move to next buffer" })
 keymap.set("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "Move to previous buffer" })
 keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Remove current file from buffer" })
+
+-- Center screen when move through search
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")

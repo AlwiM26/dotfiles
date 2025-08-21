@@ -13,6 +13,9 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
+-- Keep 10 line below when scroll
+opt.scrolloff = 10
+
 -- Line wrap
 opt.wrap = false
 
@@ -25,6 +28,7 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 opt.fillchars = { eob = " " }
+opt.showmatch = true
 
 -- setup backspace
 opt.backspace = "indent,eol,start"
@@ -36,3 +40,7 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+-- File handling
+opt.backup = false
+opt.writebackup = false
+opt.swapfile = false
