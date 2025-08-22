@@ -12,7 +12,6 @@ return {
 		},
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
-		"onsails/lspkind.nvim",
 		{
 			"roobert/tailwindcss-colorizer-cmp.nvim",
 			config = function()
@@ -25,7 +24,6 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
-		local lspkind = require("lspkind")
 
 		require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -55,12 +53,6 @@ return {
 			}),
 			formatting = {
 				format = function(entry, vim_item)
-					-- lspkind is used to show icons
-					-- vim_item = lspkind.cmp_format({
-					-- 	maxwidth = 50,
-					-- 	ellipsis_char = "...",
-					-- })(entry, vim_item)
-
 					-- tailwindcss-colorizer-cmp is used to show tailwind color
 					vim_item = require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)
 					return vim_item
