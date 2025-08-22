@@ -7,7 +7,6 @@ return {
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local keymap = vim.keymap
@@ -78,13 +77,16 @@ return {
 
 		-- lsp setup
 		local capabilities = cmp_nvim_lsp.default_capabilities()
-		lspconfig.graphql.setup({
+
+		vim.lsp.config("*", {
 			capabilities = capabilities,
+		})
+
+		vim.lsp.config("graphql", {
 			filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 		})
 
-		lspconfig.emmet_ls.setup({
-			capabilities = capabilities,
+		vim.lsp.config("emmet_ls", {
 			filetypes = {
 				"html",
 				"typescriptreact",
@@ -97,8 +99,7 @@ return {
 			},
 		})
 
-		lspconfig.lua_ls.setup({
-			capabilities = capabilities,
+		vim.lsp.config("lua_ls", {
 			settings = {
 				Lua = {
 					-- make the language server recognize "vim" global
@@ -111,5 +112,26 @@ return {
 				},
 			},
 		})
+
+		-- vim.lsp.config("ts_ls", {
+		-- 	filetypes = {
+		-- 		"javascript",
+		-- 		"javascriptreact",
+		-- 		"javascript.jsx",
+		-- 		"typescript",
+		-- 		"typescriptreact",
+		-- 		"typescript.tsx",
+		-- 	},
+		-- 	root_dir = function(fname)
+		-- 		local util = require("lspconfig.util")
+		-- 		return util.root_pattern("package.json", "tsconfig.json", ".git")(fname)
+		-- 	end,
+		-- 	settings = {
+		-- 		typescript = { format = { enable = false } },
+		-- 		javascript = { format = { enable = false } },
+		-- 	},
+		-- })
+
+		vim.lsp.enable({ "ts_ls", "emmet_ls", "lua_ls", "graphql" })
 	end,
 }
