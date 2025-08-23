@@ -1,5 +1,5 @@
 import = [
-  "./themes/gruvbox_material_medium_dark.toml"
+  "~/dotfiles/alacritty/themes/gruvbox_material_medium_dark.toml"
 ]
 
 [env]
