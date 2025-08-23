@@ -1,5 +1,5 @@
 import = [
-  "~/.config/alacritty/themes/gruvbox_material_medium_dark.toml"
+  "./themes/gruvbox_material_medium_dark.toml"
 ]
 
 [env]
