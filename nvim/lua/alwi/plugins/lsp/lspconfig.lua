@@ -2,12 +2,12 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
+		"saghen/blink.cmp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		local cmp_nvim_lsp = require("blink.cmp")
 
 		local keymap = vim.keymap
 
@@ -76,7 +76,7 @@ return {
 		})
 
 		-- lsp setup
-		local capabilities = cmp_nvim_lsp.default_capabilities()
+		local capabilities = cmp_nvim_lsp.get_lsp_capabilities()
 
 		vim.lsp.config("*", {
 			capabilities = capabilities,
