@@ -10,7 +10,7 @@ return {
 			"roobert/tailwindcss-colorizer-cmp.nvim",
 			config = function()
 				require("tailwindcss-colorizer-cmp").setup({
-					color_square_width = 2,
+					color_square_width = 1,
 				})
 			end,
 		},
@@ -20,5 +20,12 @@ return {
 		keymap = { preset = "default" },
 		appearance = { nerd_font_variant = "mono" },
 		signature = { enabled = true },
+		completion = {
+			menu = {
+				draw = {
+					columns = { { "label", "label_description", gap = 1 }, { "kind" } },
+				},
+			},
+		},
 	},
 }

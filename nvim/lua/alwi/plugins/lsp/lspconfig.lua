@@ -2,7 +2,6 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"saghen/blink.cmp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/neodev.nvim", opts = {} },
 	},
@@ -76,12 +75,6 @@ return {
 		})
 
 		-- lsp setup
-		local capabilities = cmp_nvim_lsp.get_lsp_capabilities()
-
-		vim.lsp.config("*", {
-			capabilities = capabilities,
-		})
-
 		vim.lsp.config("graphql", {
 			filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 		})
