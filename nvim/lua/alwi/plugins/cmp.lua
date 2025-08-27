@@ -41,5 +41,14 @@ return {
 				selection = { preselect = false },
 			},
 		},
+		snippets = { preset = "luasnip" },
+		sources = {
+			default = { "lsp", "path", "buffer", "snippets" },
+		},
 	},
+	opts_extend = { "sources.default" },
+	config = function(_, opts)
+		require("blink.cmp").setup(opts)
+		require("luasnip.loaders.from_vscode").lazy_load()
+	end,
 }
