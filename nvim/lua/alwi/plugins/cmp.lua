@@ -15,6 +15,7 @@ return {
 			end,
 		},
 	},
+	event = "InsertEnter",
 	version = "1.*",
 	opts = {
 		keymap = {
