@@ -29,6 +29,8 @@ return {
 
 			["<C-p>"] = { "scroll_documentation_up", "fallback" },
 			["<C-n>"] = { "scroll_documentation_down", "fallback" },
+
+			["<C-i>"] = { "show_signature", "hide_signature", "fallback" },
 		},
 		appearance = { nerd_font_variant = "mono" },
 		signature = { enabled = true },
