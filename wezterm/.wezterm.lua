@@ -20,11 +20,4 @@ config.window_padding = {
 	bottom = 2,
 }
 
-config.keys = {
-	{
-		key = "F11",
-		action = wezterm.action.ToggleFullScreen,
-	},
-}
-
 return config
