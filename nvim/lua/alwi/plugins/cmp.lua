@@ -6,14 +6,6 @@ return {
 			"L3MON4D3/LuaSnip",
 			version = "v2.*",
 		},
-		{
-			"roobert/tailwindcss-colorizer-cmp.nvim",
-			config = function()
-				require("tailwindcss-colorizer-cmp").setup({
-					color_square_width = 1,
-				})
-			end,
-		},
 	},
 	event = "InsertEnter",
 	version = "1.*",
@@ -50,6 +42,13 @@ return {
 		snippets = { preset = "luasnip" },
 		sources = {
 			default = { "lsp", "path", "buffer", "snippets" },
+			providers = {
+				lsp = {
+					opts = {
+						tailwind_color_icon = "󱓻",
+					},
+				},
+			},
 		},
 	},
 	opts_extend = { "sources.default" },

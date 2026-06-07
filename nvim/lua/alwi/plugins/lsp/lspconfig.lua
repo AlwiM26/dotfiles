@@ -6,7 +6,7 @@ return {
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
-		local cmp_nvim_lsp = require("blink.cmp")
+		local blink_cmp = require("blink.cmp")
 
 		local keymap = vim.keymap
 
@@ -72,6 +72,13 @@ return {
 				header = "",
 				prefix = "",
 			},
+		})
+
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities = blink_cmp.get_lsp_capabilities(capabilities)
+
+		vim.lsp.config("*", {
+			capabilities = capabilities,
 		})
 
 		-- lsp setup
